@@ -100,13 +100,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function checkInput() {
-        if (wordInput.value === currentWord) {
+        if (wordInput.value.toLowerCase() === currentWord.toLowerCase()) {
             overallScore++;
             overallScoreDisplay.textContent = overallScore;
             wordInput.value = "";
             displayNewWord();
         }
     }
+
 
     function checkGameOver() {
         const blocks = document.querySelectorAll("#game-box .block");
